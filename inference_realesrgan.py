@@ -180,7 +180,7 @@ def main():
 
     for idx, path in enumerate(paths):
         imgname, extension = os.path.splitext(os.path.basename(path))
-        print('Processing', '[', str(idx).zfill(len(str(len(paths)))), '/', len(paths), ']', imgname)
+        print('Processing', '[', str(idx+1).zfill(len(str(len(paths)))), '/', len(paths), ']', imgname)
 
         img = cv2.imread(path, cv2.IMREAD_UNCHANGED)
         if len(img.shape) == 3 and img.shape[2] == 4:
